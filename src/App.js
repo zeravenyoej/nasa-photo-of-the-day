@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import NasaCard from './components/NasaCard';
 import axios from 'axios';
-
+import styled from 'styled-components'
+import Container from './components/Container';
 
 
 function App() {
@@ -25,20 +26,17 @@ function App() {
     .catch(err=> console.log(err));
   }, []);
   
- console.log(explanation)
- console.log(title)
- console.log(url)
- console.log(date)
 
   return (
-    <div className="App">
+
+    <Container>
       <NasaCard 
         date={date}
         explanation={explanation}
         title={title}
         url={url}
       />
-    </div>
+    </Container>
   );
 }
 

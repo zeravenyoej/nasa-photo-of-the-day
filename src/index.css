@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('./images/guille-pozzi-sbcIAn4Mn14-unsplash.jpg');
 }
 
 code {
