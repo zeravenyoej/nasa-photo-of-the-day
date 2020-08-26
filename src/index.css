@@ -4,11 +4,6 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: url('./images/guille-pozzi-sbcIAn4Mn14-unsplash.jpg');
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  -moz-osx-font-smoothing: grayscale; 
+  background-image: './images/guille-pozzi-sbcIAn4Mn14-unsplash.jpg';
 }

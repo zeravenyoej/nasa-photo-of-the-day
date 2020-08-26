@@ -1,53 +1,35 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRocket } from '@fortawesome/free-solid-svg-icons';
-import styled from 'styled-components';
 
-
-
-const NasaCard = (props)=>{
-
-    const NasaCardContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    `;
-
-
-    const Date = styled.h2`
-    font-family: 'Courgette', cursive;
-    font-size: 4vh;
-    color: #989BC1;
-    text-shadow: 1px 1px #0A0D42;
-    `;
-
-    const Description = styled.p`
-    line-height: 1.6;
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 8%;
-    `;
-
-    const Img = styled.img`
-    width: 75%;
-    // height: 90vh;
-    border-radius: 10%;
-    `;
-
-    const Title = styled.h2`
-    font-family: 'Libre Baskerville', serif;
-    color: #6D71A9;
-    font-size: 8vh;
-    text-shadow: 2px 2px #0A0D42;
-    text-align: center;
-    `;
-    
+const NasaCard = (props)=>{    
     return (
-        <NasaCardContainer>
-            <Title><FontAwesomeIcon icon={faRocket} />{props.title}<FontAwesomeIcon icon={faRocket} /></Title>
-            <Date>{props.date}</Date>
-            <Img src={props.url}/>
-            <Description>{props.explanation}</Description>
-        </NasaCardContainer>
+        <div id="nasaCardContainer">
+            <h2 id="title">
+                <FontAwesomeIcon icon={faRocket}/>
+                &nbsp;{props.title}&nbsp;
+                <FontAwesomeIcon icon={faRocket}/>
+            </h2>
+
+            <div id="dateAndCopyrightDiv">
+                <h2>{props.date}</h2>
+                <h2>Image copyright: {props.copyright}</h2>
+            </div>
+
+            <img src={props.image} alt="nasa photo of the day"/>
+            <p id="explanation">{props.explanation}</p>
+
+            <div id="calendarDiv">
+                <h4>see another date</h4>
+                <form>
+                    <input 
+                        onChange={(e) => props.selectDifferentDate(e)}
+                        id="date.picker"
+                        type="date"
+                        value={props.date}/>
+                </form>
+            </div>
+        </div>
     )
 }
 
