@@ -79,7 +79,8 @@ img {
 }
 
 #calendarDiv {
+    text-align: center;
     margin: 0 auto;
     width: 30%;
-    color: black
+    color: black;
 }
