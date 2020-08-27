@@ -3,32 +3,84 @@
   padding: 5%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+    
+
+body {
+  background: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#wrapper {
+  background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80");
+  color: #eee;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  animation: animation 100s linear infinite;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes animation {
+   100% {
+    background-position:0px -3000px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#container {
+    background: #f5fafa;
+    padding: 3%;
+    margin: 5% 20%;
+}
+
+#nasaCardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1px solid black;
+}
+
+#title {
+    font-family: 'Libre Baskerville', serif;
+    color: #01010a;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px #0A0D42;
+    text-align: center;
+}
+
+#dateAndCopyrightDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 85%;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1rem;
+    color: #1d1e27;
+    text-shadow: 1px 1px #0A0D42;
+}
+
+img {
+    width: 75%;
+}
+
+#explanation {
+    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 8%;
+    color: black;
+}
+
+#calendarDiv {
+    text-align: center;
+    margin: 0 auto;
+    width: 30%;
+    color: black;
 }

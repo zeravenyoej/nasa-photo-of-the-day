@@ -1,21 +1,35 @@
 import React from 'react';
-import NasaCardContainer from './NasaCardContainer';
-import Title from './Title';
-import Date from './Date';
-import Img from './Img';
-import Description from './Description';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRocket } from '@fortawesome/free-solid-svg-icons';
 
-
-const NasaCard = (props)=>{
+const NasaCard = (props)=>{    
     return (
-        <NasaCardContainer>
-            <Title><FontAwesomeIcon icon={faRocket} />{props.title}<FontAwesomeIcon icon={faRocket} /></Title>
-            <Date>{props.date}</Date>
-            <Img src={props.url}/>
-            <Description>{props.explanation}</Description>
-        </NasaCardContainer>
+        <div id="nasaCardContainer">
+            <h2 id="title">
+                <FontAwesomeIcon icon={faRocket}/>
+                &nbsp;{props.title}&nbsp;
+                <FontAwesomeIcon icon={faRocket}/>
+            </h2>
+
+            <div id="dateAndCopyrightDiv">
+                <h2>{props.date}</h2>
+                <h2>Image copyright: {props.copyright}</h2>
+            </div>
+
+            <img src={props.image} alt="nasa photo of the day"/>
+            <p id="explanation">{props.explanation}</p>
+
+            <div id="calendarDiv">
+                <h4>see another date</h4>
+                <form>
+                    <input 
+                        onChange={(e) => props.selectDifferentDate(e)}
+                        id="date.picker"
+                        type="date"
+                        value={props.date}/>
+                </form>
+            </div>
+        </div>
     )
 }
 
