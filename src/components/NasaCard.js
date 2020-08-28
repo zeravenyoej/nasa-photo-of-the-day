@@ -7,9 +7,11 @@ const NasaCard = (props)=>{
         <div id="nasaCardContainer">
             <h2 id="title">
                 <FontAwesomeIcon icon={faRocket}/>
-                &nbsp;{props.title}&nbsp;
+                &nbsp;NASA Photo of the Day&nbsp;
                 <FontAwesomeIcon icon={faRocket}/>
+                <h3>{props.title}</h3>
             </h2>
+            
 
             <div id="dateAndCopyrightDiv">
                 <h2>{props.date}</h2>

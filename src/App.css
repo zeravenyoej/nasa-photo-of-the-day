@@ -46,14 +46,19 @@ code {
     flex-direction: column;
     align-items: center;
     border-radius: 1px solid black;
+    font-family: 'Libre Baskerville', serif;
 }
 
-#title {
-    font-family: 'Libre Baskerville', serif;
+#title, h3 {
     color: #01010a;
     font-size: 2.5rem;
     text-shadow: 2px 2px #0A0D42;
     text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px #0A0D42;
 }
 
 #dateAndCopyrightDiv {
@@ -61,8 +66,7 @@ code {
     flex-direction: row;
     justify-content: space-between;
     width: 85%;
-    font-family: 'Libre Baskerville', serif;
-    font-size: 1rem;
+    font-size: .7rem;
     color: #1d1e27;
     text-shadow: 1px 1px #0A0D42;
 }
@@ -84,3 +88,4 @@ img {
     width: 30%;
     color: black;
 }
+
