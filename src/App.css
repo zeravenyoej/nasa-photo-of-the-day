@@ -29,7 +29,6 @@ body {
   }
 }
 
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -89,3 +88,20 @@ img {
     color: black;
 }
 
+@media (min-width: 1px) and (max-width: 415px) {
+    #title {
+        font-size: 1.5rem;
+    }
+
+    h3, #dateAndCopyrightDiv {
+        font-size: 1rem;
+    }
+
+    #dateAndCopyrightDiv {
+        font-size: .6rem;
+    }
+
+    #explanation {
+        font-size: .8rem;
+    }
+}
